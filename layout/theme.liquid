@@ -2,10 +2,17 @@
 <head>
 {{content_for_header}}
 {{'style.css' | asset_url | stylesheet_tag}}
-{{'scripts.js' | asset_url | script_tag}}
+
 </head>
 <body>
+{% comment %} //partial {% endcomment %}
+{% render 'header' %} 
+{% comment %} Object {% endcomment %}
 {{content_for_layout}}
+{% comment %} //partial {% endcomment %}
+{% render 'footer' %}
+
+{{'scripts.js' | asset_url | script_tag}}
 </body>
 
 </html>

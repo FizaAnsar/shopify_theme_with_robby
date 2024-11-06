@@ -1,5 +1,15 @@
-<h1>
-Hello My First Shopify Theme
-</h1>
 
-<img src="{{ 'project.jpg' | asset_url}}" style="width:50%;"/>
+<h2>{{collections['frontpage'].title}}</h2>
+<section style="display: grid;grid-template-columns: repeat(3, 1fr); gap: 10px;">
+{% for product in collections['frontpage'].products %}
+<div >
+<a
+href="{{product.url}}">
+<img src="{{product.featured_image | image_url : width:400 }}" />
+<h3>{{ product.title}}</h3>
+<p>{{ product.price | money}} </p>
+</a>
+</div>
+  {% comment %} {{- product.title | link_to: product.url }} {% endcomment %}
+{% endfor %}
+</section>
