@@ -3,6 +3,13 @@
 {{content_for_header}}
 {{'style.css' | asset_url | stylesheet_tag}}
 
+{{'header.css' | asset_url | stylesheet_tag}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+{% comment %} <link rel="stylesheet" href="{{ 'header.css' | asset_url }}" type="text/css"> {% endcomment %}
+
+
 </head>
 <body>
 {% comment %} //partial {% endcomment %}
