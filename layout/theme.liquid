@@ -6,7 +6,9 @@
 </head>
 <body>
 {% comment %} //partial {% endcomment %}
-{% render 'header' %} 
+{% comment %} {% render 'header' %}  {% endcomment %}
+{% section 'header' %}
+
 {% comment %} Object {% endcomment %}
 {{content_for_layout}}
 {% comment %} //partial {% endcomment %}

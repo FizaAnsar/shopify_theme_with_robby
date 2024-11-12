@@ -1,0 +1,19 @@
+<!-- header.liquid -->
+<header class="site-header">
+    <!-- Logo Section -->
+    <div class="site-logo">
+        <a href="{{ shop.url }}">
+            <img src="{{ 'shop.png' | asset_url }}" alt="{{ shop.name }}" />
+        </a>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="{{ shop.url }}">Home</a></li>
+            <li><a href="/collections/all">Shop</a></li>
+            <li><a href="/pages/about-us">About Us</a></li>
+            <li><a href="/pages/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
