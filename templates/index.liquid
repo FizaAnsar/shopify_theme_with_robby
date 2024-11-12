@@ -9,7 +9,11 @@ href="{{product.url}}">
 <h3>{{ product.title}}</h3>
 <p>{{ product.price | money}} </p>
 </a>
-</div>
+</div> 
+  {% comment %} {% render 'product-item' %} {% endcomment %}
+
   {% comment %} {{- product.title | link_to: product.url }} {% endcomment %}
+  {% comment %} {% include 'product-item' %} {% endcomment %}
+
 {% endfor %}
 </section>
