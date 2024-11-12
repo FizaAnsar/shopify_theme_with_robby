@@ -1,19 +1,56 @@
 <!-- header.liquid -->
+{% schema %}
+{
+    "name": "Header",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo Image"
+        },
+        {
+            "type": "text",
+            "id": "link_home",
+            "label": "Home Link",
+            "default": "/"
+        },
+        {
+            "type": "text",
+            "id": "link_shop",
+            "label": "Shop Link",
+            "default": "/collections/all"
+        },
+        {
+            "type": "text",
+            "id": "link_about",
+            "label": "About Us Link",
+            "default": "/pages/about-us"
+        },
+        {
+            "type": "text",
+            "id": "link_contact",
+            "label": "Contact Link",
+            "default": "/pages/contact"
+        }
+    ]
+}
+{% endschema %}
+
 <header class="site-header">
     <!-- Logo Section -->
     <div class="site-logo">
         <a href="{{ shop.url }}">
-            <img src="{{ 'shop.png' | asset_url }}" alt="{{ shop.name }}" />
+            <img src="{{ section.settings.logo_image | img_url: '100x' }}" alt="{{ shop.name }}" />
         </a>
     </div>
 
     <!-- Navigation Section -->
     <nav class="main-navigation">
         <ul>
-            <li><a href="{{ shop.url }}">Home</a></li>
-            <li><a href="/collections/all">Shop</a></li>
-            <li><a href="/pages/about-us">About Us</a></li>
-            <li><a href="/pages/contact">Contact</a></li>
+            <li><a href="{{ section.settings.link_home }}">Home</a></li>
+            <li><a href="{{ section.settings.link_shop }}">Shop</a></li>
+            <li><a href="{{ section.settings.link_about }}">About Us</a></li>
+            <li><a href="{{ section.settings.link_contact }}">Contact</a></li>
         </ul>
     </nav>
 </header>
