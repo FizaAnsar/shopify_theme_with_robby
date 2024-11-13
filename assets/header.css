@@ -1,13 +1,15 @@
 /* header.css */
 
 .site-header {
+    padding: 20px 50px;
+    background-color: var(--header-bg-color, #1b312b); /* Dark green fallback */
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color: var(--header-bg-color, #1b312b); /* Dark green fallback */
-    color: #fff;
 }
+
+
 
 .header-navigation ul {
     display: flex;
@@ -18,7 +20,6 @@
 
 .header-navigation ul li a {
     color: var(--nav-link-color, #ffffff);
-    /* font-weight: 600; */
     padding-bottom: 5px;
     text-decoration: none;
     text-transform: capitalize;
@@ -30,18 +31,45 @@
     color: var(--nav-hover-color, #d8e999);
     border-bottom: 2px solid var(--nav-hover-color, #d8e999);
 }
+.header-navigation ul li a:active {
+    color: var(--nav-hover-color, #d8e999);
+    border-bottom: 2px solid var(--nav-hover-color, #d8e999);
+}
 
 .header-icons a {
     color: var(--icon-color, #ffffff);
-    font-size: 1.5em;
+    font-size: 1em;
     margin-left: 20px;
 }
 
-.header-navigation ul li a {
-    transition: color 0.3s, border-bottom 0.3s;
+.header-logo.middle-center {
+    order: 2;
+    text-align: center;
 }
 
-.header-navigation ul li a:hover {
-    color: var(--nav-hover-color, #d8e999);
-    border-bottom: 2px solid var(--nav-hover-color, #d8e999);
+
+.header-logo.middle-left {
+    order: 0;
+}
+
+.header-navigation ul {
+    order: 3;
+
+}
+
+.header-icons {
+    order: 4;
+    width:33.33%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+/* Sticky header behavior */
+.site-header.always {
+    position: sticky;
+    top: 0;
+}
+.site-header.on_scroll_up { 
+    /* Custom scroll behavior can be added here */ 
 }
