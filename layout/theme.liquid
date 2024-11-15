@@ -1,11 +1,13 @@
 <html>
 <head>
 {{content_for_header}}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
 {{'style.css' | asset_url | stylesheet_tag}}
 
 {{'header.css' | asset_url | stylesheet_tag}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
 {% comment %} <link rel="stylesheet" href="{{ 'header.css' | asset_url }}" type="text/css"> {% endcomment %}
 
@@ -16,12 +18,16 @@
 {% comment %} {% render 'header' %}  {% endcomment %}
 {% section 'header' %}
 
+{% section 'hero-slide' %}
+
+
 {% comment %} Object {% endcomment %}
 {{content_for_layout}}
 {% comment %} //partial {% endcomment %}
 {% render 'footer' %}
 
 {{'scripts.js' | asset_url | script_tag}}
+
 </body>
 
 </html>
